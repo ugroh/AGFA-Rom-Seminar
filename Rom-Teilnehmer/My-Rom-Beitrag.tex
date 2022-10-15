@@ -1,0 +1,78 @@
+% !TEX TS-program = pdflatexmk
+%% -- Stand: 2022/10/14
+%% -- Wir nutzen KOMA-Script
+%% --
+\documentclass[%
+	,ngerman					% Deutsch als Standard, andere über babel
+	,bibliography	= notoc	% siehe KOMA-Script 3.23, Seite 174
+	]{scrbook}
+
+%% -- KOMA Otions
+%% -- 
+\KOMAoptions{%
+	,paper 		= a4
+	,BCOR		= 15mm		% siehe KOMA-Script 2.6, S. 39
+	,twoside		= true		% siehe KOMA-Script 2.6, S. 47
+%	,fontsize	= 12pt		% Standard ist 11pt
+	,DIV		= calc		% siehe KOMA-Script 2.6, S. 42
+	,open		= any		% siehe KOMA-Script 3.16, S. 111
+	,headings 	= normal		% siehe KOMA-Script 3.16, S. 113
+	}
+
+%% -- Gehe davon aus, dass alle UTF8-nutzen
+%% --
+\usepackage[T1]{fontenc}		%% für LuaLaTeX entbehrlich
+
+
+%% -- Sprache und Anführungsszeichen richtig
+%% -- 
+\usepackage[english, italian, main=ngerman]{babel} 
+%% -- Andere Sprache via \selectlanguage{sprache}; siehe Manual
+
+%% -- Hochkomma: Eingabe mittels \enquote{text}; dann wird alles richtig
+\usepackage[autostyle, italian= guillemets, german=guillemets, english=american]{csquotes}
+
+%% -- Die Schrift
+%% --
+\usepackage{libertine}
+
+%% -- Das Layout
+%% --
+\input{./preamble/Rom-Layout}
+%\renewcommand*{\figureformat}{}	% Die Bezeichnung Abbildung kann entfallen
+									% Nur wer auf Abbildung verweist, % weg
+
+%% -- Die Pakete
+%% --
+\input{./preamble/Rom-Pakete}
+% \hypersetup{hidelinks}					% Vor dem Druck % entfernen
+
+%% -- Die Abkürzungen
+%% --
+\input{./preamble/Rom-Abkuerzungen}
+
+%% -- Literatur
+%% -- Die einzelnen Referenzen kann man dann mit den Möglichkeiten des Pakets lokal halten
+%% -- \begin{refsection} .. \printbibliography \end{refsection} in dem jeweiligen Artikel
+%% --
+\input{./preamble/Rom-BibLaTeX}
+\addbibresource{./bib/My-Biblio.bib}	%% Eigene Bibliothek
+\ExecuteBibliographyOptions{%
+	,backref		= false		% true = wo habe ich was referenziert, alles andere muss weg
+ 	,url		= true		% true	wenn online-Zitate separat gezeigt werden sollen
+ 	,doi		= true		% true  wenn DOI angezeigt werden sollen, sinnvoll bei HandOuts 
+	,eprint		= false		% true  - ” -
+	}
+
+%% -- Wir starten nun
+%% --
+\begin{document}
+
+
+\input{./content/My-Artikel}	  %% ein Muster
+
+%% -- Ansonsten per Teilnehmer
+%\input{./content/Name-Artikel}
+
+%% --
+\end{document} 

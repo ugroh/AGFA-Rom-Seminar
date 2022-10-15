@@ -1,0 +1,206 @@
+% !TEX root = ../Rom-Buch.tex
+%% -- Stand: 2022/10/14
+%% --
+
+
+%% --Einige Definitionen, damit die Eingabe einfacher wird
+%% --
+\newcommand{\LongTitel}{Hier steht der lange Titel des Beitrags}
+\newcommand{\ShortTitel}{Hier steht der kurze Titel}
+\newcommand{\AutorenBeitrag}{Autor1, Autor2 \ldots}
+
+
+%% -- Titelseite des Beitrags
+%% --
+\addchap{\LongTitel}
+
+%% -- Für Kopfzeile und TOC Eintrag
+%% --
+\markleft{\textsc{\AutorenBeitrag}}		% auf den geraden Seiten erscheinen die Autoren
+\markright{\textsc{\ShortTitel}}		% auf den ungeraden Seiten der kurze Titel
+%% 							
+\addtocontents{toc}{\textsc{\AutorenBeitrag}}
+\addtocontents{toc}{}
+
+%% -- Titelseite des Beitrags
+%% --
+\begin{center}
+\textsc{\Large \AutorenBeitrag}
+\end{center}
+	\vspace{1cm}
+\begin{center}
+	\includegraphics[width=8cm, height=8cm, keepaspectratio=true]{./content/Rom-Artikel-01-Cover.jpg}
+\end{center}
+
+%% -- Würde keine Extraseite daraus machen
+%% --
+%\newpage
+
+%% --
+%% -- ab hier die Sammlung der LIT-Zitate
+\begin{refsection}
+
+%% -- Begin des eigenen Artikels
+%% --
+\section*{Eine erste Überschrift}
+% 
+Da es sich um kurze Beiträge handelt, kann man aus meiner Sicht auf Unterverzeichnisse via
+\verb|\subsection{Überschrift}| verzichten.
+Wer es dennoch machen will bitte beachten, dass ein solcher Abschnitt dann mindestens drei Absätze enthalten sollte, die wiederum aus mindestens fünf Sätzen bestehen.
+
+Bei der Eingabe bitte folgendes beachten.
+
+\begin{itemize}[nosep, topsep=1em]
+\item
+Text, der in Hochkommata (Gänzefüßchen) eingeschlossen ist bitte mittels \verb|\enquote{Text}|
+eingegeben, \dh \enquote{Text}; dann erscheinen auch die richtigen.
+
+\item
+Auszeichnungen werden nicht fett mittels \verb|\textbf{Text}|, sondern mit \verb|\emph{Text}|
+eingegeben, \dh \emph{Text}.
+Bitte nie \verb|\textit{Text}| verwenden.
+
+\item
+Es ist ein Unterschied, ob man d.h. schreibt oder korrekt \dh
+Für die Abkürzungen mal in die Datei \texttt{Rom-Abkuerzungen.tex} reinsehen und auch den Duden konsultieren.
+
+\item
+Für Aufzählungen, \dh Listen, hat sich das Paket \texttt{enumitem} mit den vielen Möglichkeiten bewährt.
+Will man etwa römische kleine Zahlen haben: \verb|\begin{enumerate}[(i)]| macht es.
+
+\begin{enumerate}[(i), nosep]
+\item
+Etwa hier und dann
+\item
+Hier nochmals
+\end{enumerate}
+
+Einfach mal diese Datei im Original ansehen.
+Vor allem, wie man die Listen kompakter bekommt.
+
+\item
+Literatur kann man einfach mit der \LaTeX{} Umgebung \texttt{thebibliography} eingeben oder mit Hilfe von  \texttt{bibtex} und \texttt{biblatex}.
+Auf jeden Fall sollten die Zitate korrekt sein, \dh bei Verweise auf die mathematsiche Artiekl etwa die Abkürzungen der Zeitschriften.
+Dazu bitte das \emph{Zentralblatt für Mathematik} nutzen; siehe \href{https://zbmath.org}{https://zbmath.org}.
+Weiters findet sich in meinem \LaTeX-Tipp zur Literaturverwaltung. 
+
+\end{itemize}
+
+Der nun folgende Text stammt nicht von mir, da ich kein Schachspieler bin sondern Go bevorzuge.
+Zu Go siehe etwa \href{https://bit.ly/3CEdJom}{diesen Artikel auf Wikipedia}.
+
+Literatur zu \TeX{}: \textcite{kohm:2020}, \textcite{voss:2012a,voss:2017b}, \textcite{latextipps5}.
+
+\subsection{Etwas zu Schach}
+
+Schach ist ein Brettspiel und wird auf einem quadratischen Brett gespielt. Dies ist in 64 Felder eingeteilt.
+
+Am Anfang bekommt jeder Spieler 16 Figuren. Dies sind:
+\begin{enumerate}[label=\textbullet, nosep]  % enger zusammen
+  \item 
+  acht Bauern,
+  \item 
+  zwei Türme,
+  \item 
+  zwei Springer,
+  \item 
+  zwei Läufer,
+  \item 
+  eine Dame,
+  \item 
+  und ein König.
+\end{enumerate}
+
+\subsection{Eröffnung}
+Den Beginn einer Schachpartie nennt man Eröffnung. 
+Diese sind zumeist sehr ausführlich analysiert. 
+Viele Schachprogramme haben eine Eröffnungsbibliothek mit mehreren tausend Zügen. 
+Eine Eröffnung könnte beispielsweise so aussehen
+%
+\begin{enumerate}[--, nosep]
+  \item e4 e5
+  \item Lc4 d6
+  \item Df3 Sc6
+  \item Dxf6\#
+\end{enumerate}
+
+und man nennt diese Eröffnung das \emph{Schäfermatt} (Zugfolge hier ist aber falsch)
+
+%%% --------------------------------
+%%%  -- Was
+%%% --------------------------------
+%\par\medskip
+%\begin{minipage}[c][1.0\height][r]{.95\linewidth}
+%\begin{center}
+%\newchessgame
+%\mainline{1. e4 e5 2. Bc4 d6 3. Qh5 Nf6 4. Qf7}
+%\xskakset{moveid=3w}%
+%\chessboard[setfen=\xskakget{nextfen}]\\[1ex]
+%Position nach Zug 3 \, \xskakget{lan}
+%\end{center}
+%Dann zieht Weiß auf f7 und Schwarz ist matt.
+%Wer es genauer wissen will, bitte \href{https://ctan.org/pkg/xskak}{https://ctan.org/pkg/xskak} nachsehen \bzw Manual lesen. 
+%\end{minipage}
+%\par\medskip
+%% ----------------------------
+%
+
+
+\subsection{Verlauf des Spieles}
+%
+Ein Schachspiel unterteilt sich in drei Abschnitte:
+%
+\begin{description}
+  \item[Eröffnung] 
+  Dies ist der Anfang einer Partie. 
+  Man versucht, zunächst alle Figuren optimal zu platzieren.
+  
+  \item[Mittelspiel] 
+  Hier kommt es sehr auf Strategie und Taktik an. 
+  Jeder Spieler versucht, das Spiel zu seinen Gunsten zu steuern.
+  
+  \item[Endspiel] 
+  Wenn dann nur wenige Figuren auf dem Brett verblieben sind, spricht man vom Endspiel. 
+  Meist wird versucht, einen Bauern in eine höherwertige Figur umzuwandeln und den König Matt zu setzen.
+\end{description}
+%%
+Die Rangliste sieht wie folgt aus (etwas veraltet):
+\begin{center}
+  \begin{tabular}{llc}
+    Rang & Name              & Rating \\\hline
+    1    & Garry Kasparov    & 2817   \\
+    2    & Viswanathan Anand & 2774   \\
+    3    & Wladimir Kramnik  & 2764
+  \end{tabular}
+\end{center}
+%% \vref bitte verwenden
+Literatur hierzu kann nachgelesen in \textcite{brunel:1999}. 
+Zum Schluß noch ein kleines Bild, siehe \vref{fig:label1} und etwas \textbf{fette} oder \emph{kursive} Schrift.
+
+\subsection{Unterabschnitt}
+%%
+\blindtext[2]
+
+%%
+\section*{Ein neuer Hauptabschnitt}
+\subsection{Mit einem neuen Unterabschnitt}
+\lipsum[1-3]
+
+\subsection{Noch ein Unterabschnitt}
+\lipsum[4-6]
+
+\begin{figure}[t]
+  \begin{center}
+  \includegraphics[width=55mm]{./content/Rom-Artikel-01-Cover.jpg}
+  \caption{Bildunterschift 1}\label{fig:label1}		%\vspace{-3mm}
+  \end{center}
+\end{figure}
+
+%% --
+%% -- LitVerzeichnis des Beitrags
+%\nocite{*}
+% \addbibresource{./bib/name.bib}
+\printbibliography
+\end{refsection}
+
+%\bibliography{article} -> falsch siehe Masterfile
