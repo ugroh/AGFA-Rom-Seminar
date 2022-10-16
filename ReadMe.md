@@ -12,11 +12,11 @@ Für die finale Version ist `Rom-Master` zuständig. Die Vorlage ist auf dem Sta
 
 #### Für die »Teilnehmer«
 
-Die Teilnehmer nutzen für Ihren Beitrag die Vorlage `Rom-Teilnehmer` die identisch zur Vorlage für den Master ist (bis auf Titelseite, TOC etc.). Dabei sollten die entsprechenden Dateien umbenannt werden (etwa `Rom-Name`). Alles weitere findet sich in der Datei `My-Artikel.tex' 
+Die Teilnehmer nutzen für Ihren Beitrag die Vorlage `Rom-Teilnehmer` die identisch zur Vorlage für den Master ist (bis auf Titelseite, TOC etc.). Dabei sollten die entsprechenden Dateien umbenannt werden (etwa `Rom-Name`). Alles weitere findet sich in der Datei `My-Artikel.tex`
 
 #### Wie bekomme ich die Vorlagen:
 
-Einfach auf `Code`gehen (halbrechts oben) und das zip-File herunterladen. Dann werden die beiden Vorlagen heruntergeladen. Man kann dann dieses entsprechend umbenennen bzw. löschen und etwa auf seinen PC entpacken. Wer `Overleaf`nutzt: Dieses dann als zip-File und als neues Projekt hochladen. 
+Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunterladen oder auf `Code`gehen und das zip-File herunterladen. Dann werden die beiden Vorlagen heruntergeladen. Man kann dann diese entsprechend umbenennen bzw. löschen und etwa auf seinen PC entpacken. Wer `Overleaf`nutzt: Dieses dann als zip-File und als neues Projekt hochladen. 
 
 #### Bei Rückfragen: 
 
