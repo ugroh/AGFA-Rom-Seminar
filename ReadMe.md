@@ -18,7 +18,9 @@ Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunte
 
 #### Korrektur
 
-  - 2022/12/30: `bibliography = leveldown` damit es kein eigens Kapitel wird.
+* 2022/12/30: 
+  - `bibliography = leveldown` damit es kein eigens Kapitel wird.
+  - URL und DOI werden hinter dem Titel der zitierten Zeitschrift verrsteckt und diese blau unterlegt.
 
 #### Bei Rückfragen: 
 
