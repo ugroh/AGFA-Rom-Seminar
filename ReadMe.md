@@ -1,4 +1,4 @@
-### Vorlage für das Romseminar. ** Stand 2022/12/30 **
+### Vorlage für das Romseminar (Stand 2022/12/30)
 
 #### Für den »Master«
 
