@@ -72,14 +72,14 @@
 
 %% -- \subsubsection: Nur Nummer 1. etc; i.a. keine Überschrift
 %% --
-\setcounter{secnumdepth}{\subsubsectionnumdepth} 	% Anzeigen der subsub-nummer
-\renewcommand*{\thesubsubsection}{\arabic{subsubsection}.} % 1.
+\setcounter{secnumdepth}{\subsubsectionnumdepth} 	% subsub-nummer
+\renewcommand*{\thesubsubsection}{\arabic{subsubsection}.\kern3pt} % 1.
 \RedeclareSectionCommand[%
-  	,beforeskip	=  .25\baselineskip		% Skip vor dem Kommando + indent
-	,afterskip	= -0.1em					% Kein Skip aber Abstand
-	,font=\normalfont					%  
-	,tocnumwidth=1.25em					% Eintrag in TOC ist aber unterbunden
-	,tocindent	= 1em					%  
+  	,beforeskip	=  	.25\baselineskip	% Skip vor dem Kommando + indent
+	,afterskip	= 	-0.5em				% Kein Skip aber Abstand
+	,font		=	\itshape			%  
+%	,tocnumwidth=	1.25em				% Eintrag in TOC ist aber unterbunden
+%	,tocindent	= 1em					%  
 	]{subsubsection} 
 	
 	
