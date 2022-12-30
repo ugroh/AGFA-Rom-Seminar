@@ -1,6 +1,4 @@
-### Vorlage für das Romseminar
-
-Noch nicht perfekt aber es funktioniert.
+### Vorlage für das Romseminar. ** Stand 2022/12/30 **
 
 #### Für den »Master«
 
@@ -18,9 +16,13 @@ Die Teilnehmer nutzen für Ihren Beitrag die Vorlage `Rom-Teilnehmer` die identi
 
 Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunterladen oder auf `Code`gehen und das zip-File herunterladen. Dann werden die beiden Vorlagen heruntergeladen. Man kann dann diese entsprechend umbenennen bzw. löschen und etwa auf seinen PC entpacken. Wer `Overleaf`nutzt: Dieses dann als zip-File und als neues Projekt hochladen. 
 
+#### Korrektur
+
+  - 2022/12/30: `bibliography = leveldown` damit es kein eigens Kapitel wird.
+
 #### Bei Rückfragen: 
 
 Ulrich Groh <br>
-15. Oktober 2022
+
 
 Mail: <ulgr@math.uni-tuebingen.de>
