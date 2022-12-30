@@ -5,7 +5,7 @@
 \documentclass[%
 	,ngerman						% Deutsch als Standard, andere über babel
 	,bibliography	= notoc		% siehe KOMA-Script 3.23, Seite 174
-	,bibliography = leveldown 	% kein eigenes Kapitel sondern ein Abschnitt
+	,bibliography 	= leveldown 	% kein eigenes Kapitel sondern ein Abschnitt
 	]{scrbook}
 
 %% -- KOMA Otions
@@ -60,8 +60,8 @@
 \addbibresource{./bib/Rom-Biblio.bib}	%% Eine Gesamtbibliothek ist besser
 \ExecuteBibliographyOptions{%
 	,backref		= false		% true = wo habe ich was referenziert, alles andere muss weg
- 	,url		= true		% true	wenn online-Zitate separat gezeigt werden sollen
- 	,doi		= true		% true  wenn DOI angezeigt werden sollen, sinnvoll bei HandOuts 
+ 	,url		= false		% true	wenn online-Zitate separat gezeigt werden sollen
+ 	,doi		= true		% true  wenn DOI angezeigt werden sollen, sinnvoll bei HandOuts aber nicht in der gedruckten Version
 	,eprint		= false		% true  - ” -
 	}
 
