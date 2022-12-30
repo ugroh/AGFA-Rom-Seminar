@@ -129,3 +129,16 @@
     {\printfield[eprint:\strfield{eprinttype}]{eprint}}}
 
 %%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Url und DOI an Titel binden Voss 4.10.10, S. 200
+%% und https://bit.ly/2YghEHH
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newbibmacro{string+doi}[1]{%
+  \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+\DeclareFieldFormat{title}{% Titel+Formatierung an das Makro weiterreichen
+  \usebibmacro{string+doi}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,manual]{title}{\usebibmacro{string+doi}%
+	{\mkbibemph{#1}.\isdot\addspace}}
+
+\endinput
