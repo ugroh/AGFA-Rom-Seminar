@@ -22,6 +22,10 @@ Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunte
   - `bibliography = leveldown` damit es kein eigens Kapitel wird.
   - DOI wird hinter dem Titel der zitierten Zeitschrift verrsteckt und diese blau unterlegt. Daher kann man im PDF direkt darauf zugreifen. 
   - URL weiterhin separat aber bitte URL-Date nicht vergessen in der bib-Datei mit einzutragen.
+  - Mit `
+  - URL weiterhin separat aber bitte URL-Date nicht vergessen in der bib-Datei mit einzutragen.
+  - Mit `subsubsection{Text}` bekommt man eine Nummerierung hin aber mit anschließenden Fließtext. Will man keine Nummer haben, dann einfach die * Variante nutzen.
+  
 
 #### Bei Rückfragen: 
 
