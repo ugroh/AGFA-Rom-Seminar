@@ -16,7 +16,7 @@ Die Teilnehmer nutzen für Ihren Beitrag die Vorlage `Rom-Teilnehmer` die identi
 
 Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunterladen oder auf `Code`gehen und das zip-File herunterladen. Dann werden die beiden Vorlagen heruntergeladen. Man kann dann diese entsprechend umbenennen bzw. löschen und etwa auf seinen PC entpacken. Wer `Overleaf`nutzt: Dieses dann als zip-File und als neues Projekt hochladen. 
 
-#### Korrektur
+#### Korrekturen
 
 * 2022/12/30: 
   - `bibliography = leveldown` damit es kein eigens Kapitel wird.
@@ -25,7 +25,7 @@ Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunte
   - Mit `
   - URL weiterhin separat aber bitte URL-Date nicht vergessen in der bib-Datei mit einzutragen.
   - Mit `subsubsection{Text}` bekommt man eine Nummerierung hin aber mit anschließenden Fließtext. Will man keine Nummer haben, dann einfach die * Variante nutzen.
-  
+  - Kleine Überarbeitung der Vorlage für die Teilnehmer.  
 
 #### Bei Rückfragen: 
 
