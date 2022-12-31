@@ -51,14 +51,15 @@ Wer es dennoch machen will bitte beachten, dass ein solcher Abschnitt dann minde
 
 Bei der Eingabe bitte folgendes beachten.
 
-\begin{itemize}[nosep, topsep=1em]
+\begin{itemize}[topsep=1em]
 \item
-Text, der in Hochkommata (Gänzefüßchen) eingeschlossen ist bitte mittels \verb|\enquote{Text}|
-eingegeben, \dh \enquote{Text}; dann erscheinen auch die richtigen.
+Text, der in Hochkommata (Gänzefüßchen) eingeschlossen ist bitte mittels 
 
+\verb|\enquote{Text}|
+
+eingegeben: dann bekommt man \ldots \dh \enquote{Text}.
 \item
-Auszeichnungen werden nicht fett mittels \verb|\textbf{Text}|, sondern mit \verb|\emph{Text}|
-eingegeben, \dh \emph{Text}.
+Auszeichnungen werden nicht fett mittels \verb|\textbf{Text}|, sondern mit \verb|\emph{Text}| eingegeben, \dh man bekommt \emph{Text}.
 Bitte nie \verb|\textit{Text}| verwenden.
 
 \item
@@ -67,30 +68,92 @@ Für die Abkürzungen mal in die Datei \texttt{Rom-Abkuerzungen.tex} reinsehen u
 
 \item
 Für Aufzählungen, \dh Listen, hat sich das Paket \texttt{enumitem} mit den vielen Möglichkeiten bewährt.
-Will man etwa römische kleine Zahlen haben: \verb|\begin{enumerate}[(i)]| macht es.
-
-\begin{enumerate}[(i), nosep]
-\item
-Etwa hier und dann
-\item
-Hier nochmals
+Will man etwa römische kleine Zahlen haben: 
+%%
+\begin{verbatim}
+\begin{enumerate}[(i)]
+	\item
+	Erster Listenpunkt
+	\item
+	Zweiter Listenpunkt
 \end{enumerate}
+\end{verbatim}
+%% --
+und man bekommt
+%% -- 
+\begin{enumerate}[(i), nosep]
 
-Einfach mal diese Datei im Original ansehen.
-Vor allem, wie man die Listen kompakter bekommt.
+	\item
+	Erster Listenpunkt
+
+	\item
+	Zweiter Listenpunkt
+
+\end{enumerate}
+%%--
+Will man die Aufzählung kompakter haben, dann hilft \texttt{nosep}, einfach mal diese Datei im Original ansehen.
+
+\item
+Für die Beiträge genügen die ersten beiden Befehle für Abschnitte, \dh \texttt{\textbackslash section*} und \texttt{\textbackslash subsection*}.
+Der \texttt{\textbackslash subsubsection}-Befehl erwartete keine Überschrift, sonder nummeriert nur, etwa
+
+\subsubsection{} Text, der nun folgt. 
+Dies macht Sinn bei längeren Aufzählungen. 
+
+Wer eine Überschrift haben will dann halt diese eingeben. 
+Dann aber bitte die Sternvariante nutzen, etwa wie hier:
+
+\subsubsection*{Eine kleine Überschrift} Und dann der Text.
+
 
 \item
 Literatur kann man einfach mit der \LaTeX{} Umgebung \texttt{thebibliography} eingeben oder mit Hilfe von  \texttt{bibtex} und \texttt{biblatex}.
-Auf jeden Fall sollten die Zitate korrekt sein, \dh bei Verweise auf die mathematsiche Artiekl etwa die Abkürzungen der Zeitschriften.
+Auf jeden Fall sollten die Zitate korrekt sein, \dh bei Verweise auf die mathematische Artikel etwa die Abkürzungen der Zeitschriften.
 Dazu bitte das \emph{Zentralblatt für Mathematik} nutzen; siehe \href{https://zbmath.org}{https://zbmath.org}.
 Weiters findet sich in meinem \LaTeX-Tipp zur Literaturverwaltung. 
 
+\item
+Etwas zur Eingabe von Text:
+
+\begin{enumerate}[--]
+	\item 
+	\TeX{} ist nicht Word, \dh kein Programm, mit dem man einen Fließtext schreibt. 
+	Bitte daher jeden neuen Satz auf einer neuen Zeile beginnen.
+	Dies vereinfacht die Suche zu Fehlern und macht das lesen des Textes einfacher.
+	
+	\item
+	Einen neuen Absatz beginnt man, indem man eine Leerzeile einfügt. 
+	So ist \texttt{\textbackslash newline} oder \texttt{\textbackslash \textbackslash} verboten dieses dazu zu nutzen.
+	
+	\item
+	Für die Codierung wird \href{https://de.wikipedia.org/wiki/UTF-8}{UTF-8} verwendet.
+	Bitte den Editor entsprechend einstellen und man kann dann \texttt{ö} \etc normal eingeben.
+	
+	\item
+	Machen Sie den mathematischen Text lesbar.
+	
+\end{enumerate}
+
+\end{itemize}
+
+Literatur zu \TeX{}: 
+
+\begin{itemize}[nosep]
+	\item 
+	Für den Einstieg bitte \textcite{lshort-german} nutzen.
+	
+	\item
+	Für die intensivere Beschäftigung dann \textcite{voss:2012a,voss:2017b}.
+	
+	\item
+	Alles zu Koma-Script steht in \textcite{kohm:2020}.
+	
+	\item
+	Vielleicht sind auch meine Tipps nützlich, etwa \textcite{latextipps5}.
 \end{itemize}
 
 Der nun folgende Text stammt nicht von mir, da ich kein Schachspieler bin sondern Go bevorzuge.
-Zu Go siehe etwa \href{https://bit.ly/3CEdJom}{diesen Artikel auf Wikipedia}.
-
-Literatur zu \TeX{}: \textcite{kohm:2020}, \textcite{voss:2012a,voss:2017b}, \textcite{latextipps5}.
+Zu Go findet man weitere Informationen \href{https://bit.ly/3CEdJom}{auf Wikipedia}.
 
 \subsection{Etwas zu Schach}
 
@@ -185,8 +248,13 @@ Zum Schluß noch ein kleines Bild, siehe \vref{fig:label1} und etwas \textbf{fet
 %%
 \section*{Ein neuer Hauptabschnitt}
 \subsection{Mit einem neuen Unterabschnitt}
-\lipsum[1-3]
+\lipsum[1]
 
+\subsubsection{} 
+\lipsum[1]
+
+\subsubsection{} 
+\lipsum[1]
 \subsection{Noch ein Unterabschnitt}
 \lipsum[4-6]
 
