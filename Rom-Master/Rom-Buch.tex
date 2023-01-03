@@ -14,7 +14,7 @@
 \KOMAoptions{%
 	,paper 		= a4
 	,BCOR		= 15mm		% siehe KOMA-Script 2.6, S. 39
-	,twoside		= true	% siehe KOMA-Script 2.6, S. 47
+	,twoside	= true	% siehe KOMA-Script 2.6, S. 47
 	,fontsize	= 12pt		% Standard ist 11pt
 %	,DIV		= 12		% siehe KOMA-Script 2.6, S. 42
 	,open		= any		% siehe KOMA-Script 3.16, S. 111
@@ -32,7 +32,11 @@
 %% -- Andere Sprache via \selectlanguage{sprache}; siehe Manual
 
 %% -- Hochkomma: Eingabe mittels \enquote{text}; dann wird alles richtig
-\usepackage[autostyle, italian= guillemets, german=guillemets, english=american]{csquotes}
+\usepackage[%
+	,autostyle
+	,italian= guillemets
+	, german=guillemets
+	, english=american]{csquotes}
 
 %% -- Die Schrift
 %% --

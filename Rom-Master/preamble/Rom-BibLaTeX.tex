@@ -3,18 +3,18 @@
 %% --
 \usepackage[%
   	,style 		= numeric	
-   	,sorting	= nyt
+   	,sorting		= nyt
 	,hyperref	= true  
  	,maxnames	= 4
    	,minnames	= 3
    	,giveninits	= true		% Vornamen als Initiale Ulrich -> U.
-	,backend	= biber
+	,backend		= biber
  	,uniquename	= false
 ]{biblatex}  	
 %% --
-\setlength{\bibhang}{1em} 
-\setlength{\bibnamesep}{.5\normalbaselineskip}
-\setlength{\biblabelsep}{.75em}
+%\setlength{\bibhang}{1em} 
+%\setlength{\bibnamesep}{.5\normalbaselineskip}
+%\setlength{\biblabelsep}{.75em}
 %% --
 \AtEveryBibitem{\clearfield{issn}}%
 \AtEveryBibitem{\clearlist{language}}%
@@ -59,13 +59,13 @@
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareFieldFormat[article]{number}{#1} 
 \DeclareFieldFormat[article]{volume}{\textbf{#1}} 
-\DeclareFieldFormat[article]{pages}{#1.}
-\DeclareFieldFormat[article]{title}{\mkbibemph{#1.\isdot}\addspace}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[article]{title}{\mkbibemph{#1}\addspace}
 \DeclareFieldFormat{journaltitle}{#1}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Felder bei Typ -- book --
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareFieldFormat[book]{title}{\mkbibemph{#1.\isdot}\addspace}
+\DeclareFieldFormat[book]{title}{\mkbibemph{#1}.\isdot\addspace}
 \DeclareFieldFormat[book]{date}{\mkbibparens{#1}}
 \DeclareFieldFormat[book]{pages}{} 
 \DeclareFieldFormat[book]{pagetotal}{} 
@@ -79,7 +79,7 @@
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Felder bei Typ -- manual --
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareFieldFormat[manual]{title}{\mkbibemph{#1.\isdot}\addspace}
+\DeclareFieldFormat[manual]{title}{\mkbibemph{#1}\addspace}
 \DeclareFieldFormat[manual]{date}{}
 \DeclareFieldFormat[manual]{version}{}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +97,15 @@
 \renewcommand*{\intitlepunct}{}
 \renewbibmacro{in:}{}
 
-\DefineBibliographyStrings{german}{andothers = {et al.},}
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% URL 
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DefineBibliographyStrings{german}{%
+	andothers = {et al. },
+	and     = {u\adddot},
+  	urlseen = {aufgerufen am },
+  	urlfrom = {online unter },
+	}
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% URL auf neuer Zeile
@@ -139,5 +147,7 @@
 \DeclareFieldFormat{title}{% Titel+Formatierung an das Makro weiterreichen
   \usebibmacro{string+doi}{\mkbibemph{#1}}}
 \DeclareFieldFormat[article,manual]{title}{\usebibmacro{string+doi}%
-	{\mkbibemph{#1}.\isdot\addspace}}
+	{\mkbibemph{#1}.\isdot}}
+	
+
 

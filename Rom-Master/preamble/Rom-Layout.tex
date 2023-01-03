@@ -23,18 +23,22 @@
 	%
 \RedeclareSectionCommand[%
   ,beforeskip	= -1.5\baselineskip
-  ,afterskip	= 2.5\baselineskip
-  ,innerskip	= 0.75ex
+  ,afterskip		= 2.5\baselineskip
+  ,innerskip		= 0.75ex
   ,tocnumwidth	= 7em
 ]{chapter}
 %
-\renewcommand*{\addchaptertocentry}[2]{%  Seite 524 / http://www.komascript.de/node/1780
+\renewcommand*{\addchaptertocentry}[2]{%  Seite 584 / http://www.komascript.de/node/1780
   \ifstr{#1}{}{% keine Nummer:
     \addtocentrydefault{chapter}{#1}{#2}% wie bisher
   }{% mit Nummer:
     \addtocentrydefault{chapter}{}{#2} %\chapapp\ #1.-
   }%
 }
+%% -- Lange Zeilen zulasssen
+%% -- KOMA-Script 15.3. 
+%% --
+\DeclareTOCStyleEntry{tocline}{chapter}
 
 %% -- section
 %% --
@@ -56,7 +60,7 @@
 \renewcommand*{\subsectionformat}{\thesubsection.\enskip}% KOMA: Nummer in der Überschrift
 \RedeclareSectionCommand[%
   ,beforeskip	= -1.75\baselineskip
-  ,afterskip	= 0.25\baselineskip
+  ,afterskip		= 0.25\baselineskip
   ,font			= \itshape
   ,tocnumwidth	= 1em
 ]{subsection}
@@ -80,7 +84,7 @@
 \RedeclareSectionCommand[%
   	,beforeskip	=  	.25\baselineskip	% Skip vor dem Kommando + indent
 	,afterskip	= 	-0.1em				% Kein Skip aber Abstand
-	,font		=	\itshape			% Falls Überschrift 
+	,font		=	\normalfont			% Falls Überschrift 
 %	,tocnumwidth=	1.25em				% Eintrag in TOC ist aber unterbunden
 %	,tocindent	= 1em					%  
 	]{subsubsection} 

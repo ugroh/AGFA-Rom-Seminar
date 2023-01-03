@@ -8,12 +8,15 @@
 	,amssymb
 	,amsthm} 
 \usepackage[tbtags]{mathtools}
+\newtheorem*{proposition}{Satz}
+\newtheorem*{lemma}{Lemma}
 
 %% -- tikz
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows}
 
-%% --
+%% -- Pakete mit Referenz
+%% -- 
 \usepackage[newcommands,footnotes,raggedrightboxes]{ragged2e}
 	
 \usepackage{% Voss, LaTeX - 6.3 - Seite 227ff					
@@ -40,20 +43,29 @@
 	}
 
 %% -- Aufzählungen
+%% -- 
 \usepackage[%
 	,inline			% für Aufzählungen im Text = Sternvariante
 	,shortlabels	% damit \begin{enumerate}[(i)] funktioniert
 	]{enumitem}
 
 %% -- Wenn schon, dann muss man es auch definieren
+%% -- 
 \usepackage{nicefrac}
 
 %% -- Zum Testen
+%% -- 
 \usepackage{blindtext,lipsum}
 
 %% -- Für das Schachspiel
+%% -- 
 \usepackage{xskak}
 
+%% -- Für Rahmen
+%% -- 
+\usepackage{mdframed}
+%% -- infobox
+\newmdenv{infobox} %% \begin{infobox} .. \end{infobox}
 
 %% -- Falls erforderlich, sind halt alte Pakete
 %% -- 
