@@ -25,7 +25,12 @@ Für die Teilnehmer: Einfach auf das zip-File gehen (anklicken) und dann herunte
   - Mit `
   - URL weiterhin separat aber bitte URL-Date nicht vergessen in der bib-Datei mit einzutragen.
   - Mit `subsubsection{Text}` bekommt man eine Nummerierung hin aber mit anschließenden Fließtext. Will man keine Nummer haben, dann einfach die * Variante nutzen.
-  - Kleine Überarbeitung der Vorlage für die Teilnehmer.  
+  - Kleine Überarbeitung der Vorlage für die Teilnehmer.
+  
+* 2023/01/02:
+	- Aktuelle Version, d.h. Korrekturen bei den `include` Files und dem `bib` File
+	- Update bei den `Rom-Teilnehmer`-Vorlage
+	- Ergänzungen folgen  
 
 #### Bei Rückfragen: 
 
