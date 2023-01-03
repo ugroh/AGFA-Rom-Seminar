@@ -106,7 +106,7 @@
   	urlseen = {aufgerufen am },
   	urlfrom = {online unter },
 	}
-
+\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\space\url{#1}}
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% URL auf neuer Zeile
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,7 +135,6 @@
   \iffieldundef{eprinttype}
     {\printfield{eprint}}
     {\printfield[eprint:\strfield{eprinttype}]{eprint}}}
-
 %%
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Url und DOI an Titel binden Voss 4.10.10, S. 200
