@@ -97,10 +97,11 @@
 %%%
 \renewcommand*{\intitlepunct}{}
 \renewbibmacro{in:}{}
-
+%%
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% URL 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
 \DefineBibliographyStrings{german}{%
 	andothers = {et al. },
 	and     = {u\adddot},
@@ -118,7 +119,7 @@
      \clearlist{pageref}%
      \setunit{\par\nobreak}}
     {}}
-
+%
 \renewbibmacro*{doi+eprint+url}{%
   \usebibmacro{bbx:parunit}% Added
   \iftoggle{bbx:doi}
@@ -130,7 +131,7 @@
   \iftoggle{bbx:url}
     {\usebibmacro{url+urldate}}
     {}}
-  
+%  
 \renewbibmacro*{eprint}{%
   \usebibmacro{bbx:parunit}% Added
   \iffieldundef{eprinttype}
@@ -141,7 +142,7 @@
 %% Url und DOI an Titel binden Voss 4.10.10, S. 200
 %% und https://bit.ly/2YghEHH
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%
 \newbibmacro{string+doi}[1]{%
   \iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
 \DeclareFieldFormat{title}{% Titel+Formatierung an das Makro weiterreichen
