@@ -1,5 +1,5 @@
 % !TEX TS-program = pdflatexmk
-%% -- Stand: 2022/12/30
+%% -- Stand: 2023/01/08
 %% -- Wir nutzen KOMA-Script
 %% --
 \documentclass[%
@@ -12,11 +12,10 @@
 %% -- KOMA Otions
 %% -- 
 \KOMAoptions{%
-	,paper 		= a4
 	,BCOR		= 15mm		% siehe KOMA-Script 2.6, S. 39
-	,twoside	= true	% siehe KOMA-Script 2.6, S. 47
+	,twoside	= true		% siehe KOMA-Script 2.6, S. 47
 	,fontsize	= 12pt		% Standard ist 11pt
-%	,DIV		= 12		% siehe KOMA-Script 2.6, S. 42
+ 	,DIV		= calc		% siehe KOMA-Script 2.6, S. 42
 	,open		= any		% siehe KOMA-Script 3.16, S. 111
 	,headings 	= normal	% siehe KOMA-Script 3.16, S. 113
 	}
@@ -35,8 +34,8 @@
 \usepackage[%
 	,autostyle
 	,italian= guillemets
-	, german=guillemets
-	, english=american]{csquotes}
+	,german=guillemets
+	,english=american]{csquotes}
 
 %% -- Die Schrift
 %% --
@@ -62,9 +61,10 @@
 %% -- \begin{refsection} .. \printbibliography \end{refsection} 
 %% --
 \input{./preamble/Rom-BibLaTeX}
-\addbibresource{./bib/Rom-Biblio.bib}	%% Eine Gesamtbibliothek ist besser
+\addbibresource{./bib/Rom-Biblio.bib}	
+\addbibresource{TeX.bib}	  %% wegen der Einleitung; sonst weg
 \ExecuteBibliographyOptions{%
-	,backref		= false	% true = wo habe ich was referenziert
+	,backref	= false		% true = wo habe ich was referenziert
  	,url		= true		% online-Zitate werden separat gezeigt
  	,doi		= true		% DOI ist hinterlegt 
 	,eprint		= false		% true Zitate werden separat gezeigt
@@ -84,7 +84,7 @@
 %% -- Mainmatter
 \mainmatter
 
-\input{./content/Rom-Artikel-01}	%% Das schlechte Muster
+\input{./content/Rom-Artikel-01}	%% Ein Muster, muss man besser machen
 
 %% -- Ansonsten per Teilnehmer
 %\input{./content/Rom-Beitrag-Name/Name-Artikel}
